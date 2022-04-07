@@ -46,10 +46,17 @@ def get_health():
     return {
         "status": 1
     }
-    
+
 
 @api.post('/')
 def post_index():
     return {
         "status": 1
+    }
+
+
+@api.get("/bye")
+def get_bye():
+    return {
+        "bye": "bye"
     }
