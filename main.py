@@ -39,3 +39,10 @@ def post_mon_premier_post():
     return {
         "hello": "world"
     }
+
+
+@api.get('/health')
+def get_health():
+    return {
+        "status": 1
+    }

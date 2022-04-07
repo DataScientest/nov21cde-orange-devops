@@ -1,0 +1,27 @@
+name: Test1
+
+on:
+  pull_request:
+    branches:
+      - master
+jobs:   
+  test:
+    name: test
+    runs-on: ubuntu-latest
+    if: github.event_name == 'pull_request'
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Use Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.9"
+
+      - name: Install dependencies
+        run: pip install -r requirements-dev.txt
+
+      - name: Run API
+        run: python3 -m uvicorn main:api &
+
+      - name: Run tests
+        run: python3 -m pytest tests/test.py
