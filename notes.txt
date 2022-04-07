@@ -1,0 +1,32 @@
+Requêtes HTTP
+
+- URL
+- Méthode
+- Headers
+- Body
+
+-> URL: 
+
+https://example.org/my_data
+
+https:// -> protocole utilisé
+example.org -> nom de domaine (cache pour l'ip du site web)
+/my_data -> point de terminaison (endpoint)
+
+-> Méthodes:
+- GET
+- POST
+- PUT
+- DELETE
+
+
+Reponse:
+- Body
+- Headers
+- Code: 
+    - 20X: tout va bien
+    - 40X: le client a fait une erreur (404: page not found -> vous vous êtes trompés dans l'URL)
+    - 50X: le serveur a fait une erreur
+
+
+
