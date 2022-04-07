@@ -73,7 +73,7 @@ def test_get_bye():
         # url="{}/".format(API_URL)
     )
 
-    assert response.status_code == 404, response.content
+    assert response.status_code == 200, response.content
     data = response.json()
 
     assert "bye" in data
