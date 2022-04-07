@@ -51,3 +51,17 @@ def test_get_health():
 
     assert "status" in data
     assert data["status"] == 1
+
+
+def test_post_index():
+    response = requests.post(
+        url=f"{API_URL}/",
+
+        # url="{}/".format(API_URL)
+    )
+
+    assert response.status_code == 200, response.content
+    data = response.json()
+
+    assert "status" in data
+    assert data["status"] == 1
