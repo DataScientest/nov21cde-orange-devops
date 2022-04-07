@@ -65,3 +65,16 @@ def test_post_index():
 
     assert "status" in data
     assert data["status"] == 1
+
+def test_get_bye():
+    response = requests.get(
+        url=f"{API_URL}/bye",
+
+        # url="{}/".format(API_URL)
+    )
+
+    assert response.status_code == 200, response.content
+    data = response.json()
+
+    assert "bye" in data
+    assert data["bye"] == "bye"
